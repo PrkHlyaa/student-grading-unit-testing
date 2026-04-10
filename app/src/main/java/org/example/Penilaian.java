@@ -9,16 +9,18 @@ public class Penilaian {
 
     // Validasi nilai
     public boolean validasiNilai(double tugas, double uts, double uas) {
-        if (tugas < 0 || tugas > 100 ||
-            uts < 0 || uts > 100 ||
-            uas < 0 || uas > 100) {
+        if (tugas < 0 || tugas > 100) {
             return false;
         }
-
+        if (uts < 0 || uts > 100) {
+            return false;
+        }
+        if (uas < 0 || uas > 100) {
+            return false;
+        }
         if (tugas == 0 && uts == 0 && uas == 0) {
             return false;
         }
-
         return true;
     }
 
@@ -26,7 +28,7 @@ public class Penilaian {
 
 
     // Tentukan grade
-    
+
 
     // Tentukan kelulusan
 
