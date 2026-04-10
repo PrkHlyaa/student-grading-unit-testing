@@ -5,7 +5,7 @@ public class Mahasiswa {
     private double nilaiUTS;
     private double nilaiUAS;
     private double nilaiAkhir;
-    private char grade;
+    private String grade;
     private String statusKelulusan;
 
     // Setter
@@ -25,7 +25,7 @@ public class Mahasiswa {
         this.nilaiAkhir = nilaiAkhir;
     }
 
-    public void setGrade(char grade) {
+    public void setGrade(String grade) {
         this.grade = grade;
     }
 
@@ -50,7 +50,7 @@ public class Mahasiswa {
         return nilaiAkhir;
     }
 
-    public char getGrade() {
+    public String getGrade() {
         return grade;
     }
 

@@ -35,7 +35,7 @@ public class MainApp {
             mhs.setNilaiUAS(uas);
 
             double nilaiAkhir = penilaian.hitungNilaiAkhir(tugas, uts, uas);
-            char grade = penilaian.tentukanGrade(nilaiAkhir);
+            String grade = penilaian.tentukanGrade(nilaiAkhir);
             String status = penilaian.tentukanKelulusan(nilaiAkhir);
 
             mhs.setNilaiAkhir(nilaiAkhir);
