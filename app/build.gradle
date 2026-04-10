@@ -45,3 +45,18 @@ tasks.named('test') {
 tasks.named('run') {
     standardInput = System.in
 }
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "failed", "skipped"
+        exceptionFormat "full"
+        showExceptions true
+        showCauses true
+        showStackTraces true
+    }
+
+    afterTest { descriptor, result ->
+        println "TEST: ${descriptor.className} > ${descriptor.name} => ${result.resultType}"
+    }
+}
