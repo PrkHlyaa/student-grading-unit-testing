@@ -25,7 +25,21 @@ public class Penilaian {
     }
 
     // Hitung nilai akhir
+    public double hitungNilaiAkhir(double tugas, double uts, double uas) {      
+        if (!validasiNilai(tugas, uts, uas)) {                                  
+            return -1;                                                                                 
+        }
 
+        double nilaiAkhir = (bobotTugas * tugas) +
+                            (bobotUTS * uts) +
+                            (bobotUAS * uas);                                   
+
+        if (nilaiAkhir > 100) {                                                 
+            return -1;                                                          
+        }
+
+        return nilaiAkhir;                                                          
+    }    
 
     // Tentukan grade
     public String tentukanGrade(double nilaiAkhir) {
@@ -48,5 +62,8 @@ public class Penilaian {
 
 
     // Tentukan kelulusan
-
+    public String tentukanKelulusan(double nilaiAkhir) {
+        if (nilaiAkhir >= 60) return "Lulus";
+        else return "Tidak Lulus";
+    }
 }
