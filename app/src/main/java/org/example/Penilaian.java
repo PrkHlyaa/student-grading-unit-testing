@@ -60,7 +60,6 @@ public class Penilaian {
     }
 
 
-
     // Tentukan kelulusan
     public String tentukanKelulusan(double nilaiAkhir) {
         if (nilaiAkhir >= 60) return "Lulus";
