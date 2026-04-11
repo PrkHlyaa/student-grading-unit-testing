@@ -9,7 +9,9 @@ class KelulusanTest {
 
     @Test
     void tentukanKelulusanLulusJikaNilaiMinimalEnamPuluh() {
+        assertEquals("Lulus", penilaian.tentukanKelulusan(100)); 
         assertEquals("Lulus", penilaian.tentukanKelulusan(60));
         assertEquals("Tidak Lulus", penilaian.tentukanKelulusan(59.99));
+        assertEquals("Tidak Lulus", penilaian.tentukanKelulusan(0));
     }
 }
